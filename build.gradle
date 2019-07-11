@@ -20,8 +20,14 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation "org.springframework.boot:spring-boot-starter-jdbc"
+	implementation "mysql:mysql-connector-java:${mysql_version}"
+
+	compileOnly "org.projectlombok:lombok"
+
+	annotationProcessor "org.projectlombok:lombok"
+
+	testImplementation "org.junit.jupiter:junit-jupiter-api:${jupiter_version}"
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jupiter_version}"
 }
